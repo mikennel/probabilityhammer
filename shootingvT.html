@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ProbHam - Shooting</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+
+  <!-- Materialize framework-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+  <!-- Local stylesheets.-->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/shooting.css">
+
+</head>
+<body>
+
+  <div id="titleBar" class="row">
+    <div id="homeButtonHolder" class="col s2">
+      <a href="./index.html">
+        <img id="homeArrow" class="responsiveImg" src="./img/arrow.png">
+      </a>
+    </div>
+    <div class="col s8">
+      <h2>Shooting Attacks</h2>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <form>
+      <div class="row">
+        <h4>Attacker</h4>
+        <div class="col s6 m4">
+          <h5>Unit Stats</h5>
+          <div class="row">
+            <div class="input-field col s4">
+              <select>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <label>Ballistic Skill</label>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m4">
+          <h5>Weapon</h5>
+          <div class="row">
+            <div class="input-field col s4">
+              <select>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <label>Strength</label>
+            </div>
+            <div class="input-field col s4">
+              <select>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+              </select>
+              <label>Shots</label>
+            </div>
+            <div class="input-field col s4">
+              <select>
+                <option value="7" selected>-</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+              <label>AP</label>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <h5>Special Rules</h5>
+            <input id="twinLinked" class="filled-in checkbox-orange" type="checkbox" name="twinLinked" value="twinLinked" />
+            <label for="twinLinked">Twin Linked</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <h4>Defender</h4>
+        <div class="col s6">
+          <h5>Unit Stats</h5>
+          Toughness
+          Armour Save
+          Invuln Save
+          Cover Save
+        </div>
+        <div class="col s6">
+          <h5>Special Rules</h5>
+          Feel No Pain
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <!-- jquery cdn-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- materialize javascript-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <!-- local javascript files.  Additional js should be included below main.  Note the file path -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

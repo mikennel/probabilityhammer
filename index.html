@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ProbHam - Shooting</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+
+  <!-- Materialize framework-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+  <!-- Local stylesheets.-->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/shooting.css">
+
+</head>
+<body>
+
+  <div id="titleBar" class="row">
+    <div id="homeButtonHolder" class="col s2">
+      <!-- <a href="./index.html">
+        <img id="homeArrow" class="responsiveImg" src="./img/arrow.png">
+      </a> -->
+    </div>
+    <div class="col s8">
+      <h2>Probability Hammer</h2>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <form>
+      <div class="row">
+        <h4>Attacker</h4>
+        <div class="col s4 m3">
+          <h5>Unit Stats</h5>
+          <div class="row">
+            <div class="input-field col s12">
+              <select>
+                <option value="2">2+</option>
+                <option value="3" selected>3+</option>
+                <option value="4">4+</option>
+                <option value="5">5+</option>
+                <option value="6">6+</option>
+                <option value="7">7+</option>
+              </select>
+              <label>Ballistic/Weapon Skill</label>
+            </div>
+          </div>
+        </div>
+        <div class="col s8 m5">
+          <h5>Weapon</h5>
+          <div class="row">
+            <div class="input-field col s6 m3">
+              <input placeholder="4" id="attackStr" type="number">
+              <label>Strength</label>
+            </div>
+            <div class="input-field col s6 m3">
+              <input placeholder="1" id="attackShots" type="number">
+              <label>Shots/Attacks</label>
+            </div>
+            <div class="input-field col s6 m3">
+              <select id="attackAP">
+                <option value="0" selected>-</option>
+                <option value="1">-1</option>
+                <option value="2">-2</option>
+                <option value="3">-3</option>
+                <option value="4">-4</option>
+                <option value="5">-5</option>
+              </select>
+              <label>AP</label>
+            </div>
+            <div class="input-field col s6 m3">
+              <select  id="attackDam">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="4">5</option>
+                <option value="5">6</option>
+                <option value="d3">d3</option>
+                <option value="d6">d6</option>
+              </select>
+              <label>Damage</label>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <h5>Special Rules</h5>
+            <input id="attackRerollOnes" class="filled-in checkbox-orange" type="checkbox" name="attackRerollOnes" value="attackRerollOnes" />
+            <label for="attackRerollOnes">Reroll 1's</label>
+            <input id="attackRerollAll" class="filled-in checkbox-orange" type="checkbox" name="attackRerollAll" value="attackRerollAll" />
+            <label for="attackRerollAll">Reroll All</label>
+            <input id="attackPlusOne" class="filled-in checkbox-orange" type="checkbox" name="attackPlusOne" value="attackPlusOne" />
+            <label for="attackPlusOne">+1 To Hit</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <h4>Defender</h4>
+        <div class="col s6">
+          <h5>Unit Stats</h5>
+          <div class="input-field col s6 m3">
+            <input placeholder="1" id="defendTough" type="number">
+            <label>Toughness</label>
+          </div>
+          <div class="input-field col s4">
+            <select id="defendArmourSave">
+              <option value="2">2+</option>
+              <option value="3" selected>3+</option>
+              <option value="4">4+</option>
+              <option value="5">5+</option>
+              <option value="6">6+</option>
+              <option value="7">7+</option>
+            </select>
+            <label>Armour Save</label>
+          </div>
+          <div class="input-field col s4">
+            <select id="defendInvulnSave">
+              <option value="false" selected>-</option>
+              <option value="2">2+</option>
+              <option value="3">3+</option>
+              <option value="4">4+</option>
+              <option value="5">5+</option>
+              <option value="6">6+</option>
+            </select>
+            <label>Invuln Save</label>
+          </div>
+        </div>
+        <div class="col s6">
+          <h5>Special Rules</h5>
+          <div class="input-field col s4">
+            <select id="defendIgnoreWound">
+              <option value="false" selected>-</option>
+              <option value="2">2+</option>
+              <option value="3">3+</option>
+              <option value="4">4+</option>
+              <option value="5">5+</option>
+              <option value="6">6+</option>
+            </select>
+            <label>Ignore Wound</label>
+          </div>
+          <div class="input-field col s4">
+            <select id="defendMinusToHit">
+              <option value="false" selected>-</option>
+              <option value="1">-1</option>
+              <option value="2">-2</option>
+              <option value="3">-3</option>
+            </select>
+            <label>- To Hit</label>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <!-- jquery cdn-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- materialize javascript-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <!-- local javascript files.  Additional js should be included below main.  Note the file path -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
